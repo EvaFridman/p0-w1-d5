@@ -1,0 +1,248 @@
+:root {
+
+    --light: #ffffff;
+    --dark: #232325;
+    --yellow: #fdd700;
+    --mid-gray: #707070;
+    --light-gray: #d4d4d4;
+    --border-light: #ababab;
+    --border-dark: #dfdfdf;
+
+    --common-mg: 20px;
+    --common-pd: 10px;
+    --border-r: 10%;
+}
+
+* { box-sizing: border-box }
+
+body {
+    background-color: var(--dark);
+    color: var(--light-gray);
+    font-family: "Oranienbaum", serif;
+    margin: 0;
+    
+}
+
+header {
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-dark);
+}
+
+header h1 {
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 7px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 15px;
+}
+
+nav a {
+    font-size: 22px;
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+section {
+    overflow: hidden;
+}
+
+input,
+textarea {
+    display: block;
+}
+
+fieldset {
+    display: inline-block;
+    border: hidden;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+button {
+    background-color: var(--yellow);
+    color: var(--dark);
+    border: none;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-left: 10px;  
+}
+
+address div {
+    padding-top: 40px;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 2px;
+}
+
+a:hover,
+button:hover {
+    cursor: pointer;
+    outline: var(--yellow);
+}
+
+textarea:hover,
+input:hover {
+    cursor: text;
+    outline: var(--yellow);
+}
+
+.about_text,
+.about_photo {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about_text {
+    width: 60%;
+    font-size: 30px;
+    padding-top: 120px;
+    margin-left: 20px;
+}
+
+.about_photo {
+    width: 400px;
+    margin-left: 40px;
+}
+
+.about_photo img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-r);
+    margin-left: 80px;
+}
+
+.stack {
+    background-color: var(--yellow);
+    color: var(--dark);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.stack ul {
+    padding: 0;
+    margin: 30px 0;
+}
+
+.stack li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+.logo {
+    width: 84px;
+    height: 84px;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.projects {
+    background-color: var(--light);
+    color: var(--dark);
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--dark);
+}
+
+.project-card {
+    display: inline-block;
+    width: 28%;
+    vertical-align: top;
+    text-align: left;
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 8px 16px;
+}
+
+.project-link {
+    color: var(--mid-gray);
+}
+
+.skip-link {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    background: var(--yellow);
+    color: var(--dark);
+    padding: var(--common-pd);
+    }
+    
+.skip-link:focus {
+    top: 0;
+    }
+
+.contacts {
+    text-align: center;
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 30px 550px 30px 550px;
+    border: 2px solid var(--yellow);
+}
+    
+.contacts form,
+.contacts address {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+.contacts form {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.contacts address {
+    margin-top: 50px;
+    float: right;
+}
+
+.icon {
+    width: 20px;
+}
+
+.icon-link {
+    color: var(--mid-gray);
+}
+
+#textarea-help {
+    display: block;
+    margin-bottom: var(--common-mg);
+}
