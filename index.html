@@ -6,7 +6,7 @@
         <meta name="description" content="💻 Портфолио Fullstack-разработчика. Разработка современных веб-приложений. Внутри: стек, портфолио и контакты.">
         <meta property="og:title" content="Ева Фридман - начинающий Fullstack-разработчик">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="">
+        <meta property="og:image" content="images/photo.jpg">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
         <meta property="og:description" content="💻 Портфолио Fullstack-разработчика. Разработка современных веб-приложений. Внутри: стек, портфолио и контакты.">
@@ -17,7 +17,7 @@
         <a class="skip-link" href="#main">Перейти к содержимому</a>
         <header>
             <h1>Ева Фридман</h1>
-            <nav>
+            <nav aria-label="Основная навигация">
                 <ul>
                     <li><a href="#about">О себе</a></li>
                     <li><a href="#stack">Стек</a></li>
@@ -28,16 +28,16 @@
         </header>
         <main id="main">
 
-            <section id="about">
-                <h2>О себе</h2>
-                <p>Перспективный начинающий Fullstack-разработчик, который всё ещё овладеваем мастерством, но уже что-то умеет. Ознакомьтесь с моим технологическим стеком и проектами ниже. Наймите меня!</p>
+            <section id="about" aria-labelledby="selfdescription">
+                <h2 id="selfdescription">О себе</h2>
+                <p>Перспективный начинающий Fullstack-разработчик, который всё ещё овладеваю мастерством, но уже что-то умею. Ознакомьтесь с моим технологическим стеком и проектами ниже. Наймите меня!</p>
                 <figure>
-                    <img src="images/IMG_20260104_191046_336.jpg" alt="Фото начинающего Fullstack-разработчика Евы Фридман">
+                    <img src="images/photo.jpg" alt="Фото начинающего Fullstack-разработчика Евы Фридман">
                 </figure>
             </section>
 
-            <section id="stack">
-                <h2>Технологии, которыми я владею и планирую овладеть</h2>
+            <section id="stack" aria-labelledby="tech">
+                <h2 id="tech">Технологии, которыми я владею и планирую овладеть</h2>
                 <ul>
                     <li><img src="images/html5.svg" alt="Лого HTML">HTML</li>
                     <li><img src="images/css.svg" alt="Лого CSS">CSS</li>
@@ -45,8 +45,8 @@
                 </ul>
             </section>
 
-            <section id="projects">
-                <h2>Проекты</h2>
+            <section id="projects" aria-labelledby="test-projects">
+                <h2 id="test-projects">Проекты</h2>
                 <article>
                     <h3>Каталог бежевых интерьеров</h3>
                     <p>Прекрасный сайт, на котором можно выбрать, но пока нельзя заказать, бежевый интерьер на любой вкус</p>
@@ -64,10 +64,10 @@
                 </article>
             </section>
 
-            <section id="contacts">
-                <form>
+            <section id="contacts" aria-labelledby="apply">
+                <form action="https://httpbin.org/get">
                     <fieldset>
-                    <legend>Свяжитесь со мной</legend>
+                    <legend id="apply">Свяжитесь со мной</legend>
 
                     <label for="name">Имя</label>
                     <input 
@@ -102,14 +102,18 @@
                 <button type="submit">Отправить сообщение</button>
                 </form>
 
-                <img src="images/Без названия.png" alt="Иконка телефона">
-                <p>Телефон</p>
-                <small>+7 (911) 708-68-26</small>
-
-                <img src="images/364245.svg" alt="Инконка электронной почты">
-                <p>Электронная почта</p>
-                <small>fridman.1999@mail.ru</small>
-
+                <address>
+                    <div>
+                      <img src="images/phone.svg" alt="Иконка телефона">
+                      <p>Телефон<br><a href="tel:+71234567890">+7 (911) 708-68-26</a></p>
+                    </div>
+                    
+                    <div>
+                      <img src="images/email.svg" alt="Иконка электронной почты">
+                      <p>Электронная почта<br><a href="mailto:fridman.1999@mail.ru">fridman.1999@mail.ru</a></p>
+                    </div>
+                </address>
+                  
             </section>
         </main>
         <footer>
