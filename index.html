@@ -16,24 +16,105 @@
     <body>
         <a class="skip-link" href="#main">Перейти к содержимому</a>
         <header>
-            <h1></h1>
+            <h1>Ева Фридман</h1>
             <nav>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="#about">О себе</a></li>
+                    <li><a href="#stack">Стек</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#contacts">Cвязаться со мной</a></li>
                 </ul>
             </nav>
         </header>
-        <main id="#main">
-            <section></section>
-            <section></section>
-            <section>
-                <form></form>
+        <main id="main">
+
+            <section id="about">
+                <h2>О себе</h2>
+                <p>Перспективный начинающий Fullstack-разработчик, который всё ещё овладеваем мастерством, но уже что-то умеет. Ознакомьтесь с моим технологическим стеком и проектами ниже. Наймите меня!</p>
+                <figure>
+                    <img src="images/IMG_20260104_191046_336.jpg" alt="Фото начинающего Fullstack-разработчика Евы Фридман">
+                </figure>
+            </section>
+
+            <section id="stack">
+                <h2>Технологии, которыми я владею и планирую овладеть</h2>
+                <ul>
+                    <li><img src="images/html5.svg" alt="Лого HTML">HTML</li>
+                    <li><img src="images/css.svg" alt="Лого CSS">CSS</li>
+                    <li><img src="images/javascript.svg" alt="Лого JavaScript">JavaScript</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Проекты</h2>
+                <article>
+                    <h3>Каталог бежевых интерьеров</h3>
+                    <p>Прекрасный сайт, на котором можно выбрать, но пока нельзя заказать, бежевый интерьер на любой вкус</p>
+                    <a href="https://github.com/EvaFridman/p0-w1-d4-t2">Github проекта</a>
+                </article>
+                <article>
+                    <h3>Многостраничный сайт IT-митапа</h3>
+                    <p>При полном отсутствии бюджета сделала всё возможное - три страницы, таблицы, формы</p>
+                    <a href="https://github.com/EvaFridman/p0-w1-d3-t5">Github проекта</a>
+                </article>
+                <article>
+                    <h3>Сайт крутого продукта</h3>
+                    <p>Тут вам и доступность, и глобальные стили, и всё на свете</p>
+                    <a href="https://github.com/EvaFridman/p0-w1-d4-t4">Github проекта</a>
+                </article>
+            </section>
+
+            <section id="contacts">
+                <form>
+                    <fieldset>
+                    <legend>Свяжитесь со мной</legend>
+
+                    <label for="name">Имя</label>
+                    <input 
+                        type="text"
+                        id="name"
+                        name="name"
+                        pattern="[A-Za-z]{2,20}"
+                        autocomplete="name"
+                        required
+                        aria-describedby="name-help"
+                    />
+                    <small id="name-help">Разрешены только латинские буквы без пробелов, длина от 2 до 20 символов</small>
+                    <p aria-live="polite" id="name-error"></p>
+
+                    <label for="email">Электронная почта</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        title="Например, name@example.com"
+                        autocomplete="email"
+                        required
+                        aria-describedby="email-help"
+                    />
+                    <small id="email-help">Например, name@example.com</small>
+                    <p aria-live="polite" id="email-error"></p>
+
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" rows="4" cols="50" aria-describedby="textarea-help"></textarea>
+                    <small id="textarea-help">Напишите ваш запрос</small>
+                </fieldset>
+                <button type="submit">Отправить сообщение</button>
+                </form>
+
+                <img src="images/Без названия.png" alt="Иконка телефона">
+                <p>Телефон</p>
+                <small>+7 (911) 708-68-26</small>
+
+                <img src="images/364245.svg" alt="Инконка электронной почты">
+                <p>Электронная почта</p>
+                <small>fridman.1999@mail.ru</small>
+
             </section>
         </main>
         <footer>
-            <time></time>
+            <small>© All rights reserved by Eva Fridman</small>
+            <time datetime="2026-06-29">2026 год</time>
         </footer>
     </body>
 </html>
