@@ -8,9 +8,13 @@
     --border-light: #ababab;
     --border-dark: #dfdfdf;
 
+    --h2-size: 36px;
+    --pf-size: 18px;
+    --h3-size: 26px;
+
     --common-mg: 20px;
     --common-pd: 10px;
-    --border-r: 10%;
+    --border-r: 12px;
 }
 
 * { box-sizing: border-box }
@@ -25,16 +29,16 @@ body {
 
 header {
     overflow: hidden;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--border-dark);
+    background-color: var(--mid-gray);
+    padding: 100px 0 100px 0;
 }
 
-header h1 {
+h1 {
     float: left;
     margin: 0 0 0 20px;
 }
 
-header nav {
+nav {
     text-align: center;
     margin-top: 7px;
 }
@@ -48,16 +52,35 @@ nav li {
     display: inline-block;
     list-style: none;
     margin-left: 15px;
+    padding: 10px;
 }
 
 nav a {
     font-size: 22px;
     color: var(--light-gray);
     text-decoration: none;
+    padding: 10px;
 }
 
 h2 {
-    margin-left: 20px;
+    font-size: var(--h2-size);
+    text-align: center;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+p {
+    font-size: var(--pf-size);
+}
+
+a {
+    font-size: var(--pf-size); 
+}
+
+a img {
+    width: var(--pf-size);
 }
 
 section {
@@ -66,39 +89,55 @@ section {
 
 input,
 textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     display: block;
+    padding: 10px;
+    margin: 0 10px 0px 10px;
+}
+
+label {
+    margin: 10px;
+    font-size: var(--h3-size);
+}
+
+fieldset small {
+    margin: 10px;
+}
+
+form {
+    color: var(--light);
+    margin: 0 0 20px 0;
+    text-align: left;
+    padding: 65px 65px 0px 65px;
 }
 
 fieldset {
     display: inline-block;
-    border: hidden;
-}
-
-footer {
-    text-align: center;
-}
-
-footer p {
+    border: 0;
+    padding: 0;
     margin: 0;
 }
 
 button {
     background-color: var(--yellow);
     color: var(--dark);
-    border: none;
-    padding: 10px;
-    margin-bottom: 30px;
-    margin-left: 10px;  
+    font-size: 22px;
+    border: 0;
+    border-radius: var(--border-r);
+    padding: 30px;
+    display: block;
+    margin: 30px 10px 30px 100px; 
 }
 
 address div {
     padding-top: 40px;
 }
 
-legend {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+footer {
+    text-align: center;
+    padding: 130px 0 100px 0;
 }
 
 a:focus-visible,
@@ -112,58 +151,71 @@ input:focus-visible {
 a:hover,
 button:hover {
     cursor: pointer;
-    outline: var(--yellow);
+}
+
+nav a:hover {
+    outline: 1px solid var(--yellow);
+    border-radius: var(--border-r);
 }
 
 textarea:hover,
 input:hover {
     cursor: text;
     outline: var(--yellow);
+    outline: 2px solid var(--yellow);
 }
 
-.about_text,
+.about_info,
 .about_photo {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
+}
+
+.about {
+    padding: 40px 0 40px 0;
+}
+
+.about_info {
+    width: 40%;
 }
 
 .about_text {
-    width: 60%;
-    font-size: 30px;
-    padding-top: 120px;
+    font-size: 32px;
     margin-left: 20px;
 }
 
 .about_photo {
-    width: 400px;
-    margin-left: 40px;
+    width: 50%;
+    margin-left: 110px;
 }
 
 .about_photo img {
-    width: 100%;
+    width: 45%;
     height: auto;
     border-radius: var(--border-r);
-    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.about_photo img:nth-child(2) {
+    margin-right: 0px;
 }
 
 .stack {
     background-color: var(--yellow);
     color: var(--dark);
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 80px 0 90px 0;
 }
 
 .stack ul {
-    padding: 0;
-    margin: 30px 0;
+    padding-top: 30px;
 }
 
 .stack li {
     display: inline-block;
     list-style: none;
     margin: 0 20px;
-    font-size: 20px;
+    font-size: var(--pf-size);
 }
 
 .logo {
@@ -177,7 +229,7 @@ input:hover {
     background-color: var(--light);
     color: var(--dark);
     text-align: center;
-    padding-bottom: 20px;
+    padding: 80px 0 90px 0;
     border-bottom: 2px solid var(--dark);
 }
 
@@ -186,14 +238,16 @@ input:hover {
     width: 28%;
     vertical-align: top;
     text-align: left;
-    border: 2px solid var(--border-light);
+    border: 1px solid var(--border-dark);
     border-radius: 12px;
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.1);
     padding: 16px;
     margin: 0 8px 16px;
 }
 
 .project-link {
     color: var(--mid-gray);
+    
 }
 
 .skip-link {
@@ -211,31 +265,39 @@ input:hover {
 
 .contacts {
     text-align: center;
-    background-color: var(--light);
+    background: linear-gradient(to left, var(--light) 0%, var(--light) 30%, var(--mid-gray) 30%, var(--mid-gray) 100%);
     color: var(--dark);
-    margin: 30px 550px 30px 550px;
+    margin: 100px 27% 30px 27%;
     border: 2px solid var(--yellow);
+    border-radius: var(--border-r);
+}
+
+legend {
+    color: var(--light);
+    font-size: var(--h2-size);
+    text-align: left;
+    margin: 50px 0 20px 100px;
+}
+
+.contacts-inner {
+    display: inline-block;
+    width: 100%;
 }
     
 .contacts form,
 .contacts address {
     display: inline-block;
-    vertical-align: top;
-    width: 48%;
-}
-
-.contacts form {
-    margin-top: 30px;
-    text-align: left;
+    width: 70%;
 }
 
 .contacts address {
-    margin-top: 50px;
+    width: 30%;
     float: right;
+    margin-top: 180px;
 }
 
 .icon {
-    width: 20px;
+    width: 30px;
 }
 
 .icon-link {
